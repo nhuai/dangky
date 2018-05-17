@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskdescri"
+        android:gravity="start"
+        android:layout_margin="10dp"
+        android:hint="Describe your task..."
+        android:lines="4"
+        android:minLines="4"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskdescri"
+        android:layout_margin="10dp"
+        android:id="@+id/priority">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:weightSum="3"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/buttonP1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/buttonP2"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/buttonP3"
+                />
+
+
+        </LinearLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:weightSum="3"
+            >
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/button1"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/button2"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/button3"
+
+                />
+
+        </RadioGroup>
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priority"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:weightSum="2">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Thêm"
+            android:onClick="OnClickAddTask"
+            android:id="@+id/addbutton"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hủy bỏ"
+            android:onClick="OnClickCancelTask"
+            android:id="@+id/cancelbutton"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</RelativeLayout>
+<!--<EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskdescri"
+        android:gravity="start"
+        android:hint="Describe your task..."
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="Độ ưu tiên"
+        android:padding="10dp"
+        android:textSize="17dp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:weightSum="3"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thấp"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/buttonP1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vừa"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/buttonP2"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cao"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/buttonP3"
+                />
+
+
+        </LinearLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:weightSum="3"
+            >
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/button1"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/button2"
+                />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnPrioritySelected"
+                android:id="@+id/button3"
+
+                />
+
+        </RadioGroup>
+
+    </FrameLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Thêm"
+        android:onClick="OnClickAddTask"
+        android:id="@+id/addbutton"
+        />-->
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="horizontal"-->
+<!--android:gravity="center"-->
+<!--android:weightSum="3">-->
+<!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/buttonP1"-->
+    <!--android:text="High"-->
+    <!--android:onClick="onPrioritySelected"-->
+    <!--android:layout_weight="1"/>-->
+<!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/buttonP2"-->
+    <!--android:text="Medium"-->
+    <!--android:onClick="onPrioritySelected"-->
+    <!--android:layout_weight="1"/>-->
+<!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/buttonP3"-->
+    <!--android:text="Low"-->
+    <!--android:onClick="onPrioritySelected"-->
+    <!--android:layout_weight="1"/>-->
+
+<!--</LinearLayout>-->
+<!--<RadioGroup-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_gravity="center"-->
+<!--android:weightSum="3">-->
+
+<!--<RadioButton-->
+    <!--android:id="@+id/radButton1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:onClick="OnPrioritySelected" />-->
+<!--<RadioButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/radButton2"-->
+    <!--android:layout_weight="1"-->
+    <!--android:onClick="OnPrioritySelected"/>-->
+<!--<RadioButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/radButton3"-->
+    <!--android:layout_weight="1"-->
+    <!--android:onClick="OnPrioritySelected"/>-->
+
+<!--</RadioGroup>-->
+
+    <!--</LinearLayout>-->
+<!--<ScrollView-->
+<!--android:layout_width="fill_parent"-->
+<!--android:layout_height="fill_parent"-->
+<!--android:layout_below="@id/add_reminder_layout_top">-->
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+<!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="72dp"-->
+    <!--android:id="@+id/date"-->
+    <!--android:clickable="true"-->
+    <!--android:onClick="setDate">-->
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/date_icon"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="32dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/ic_date_range_black_24dp"-->
+        <!--/>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_toRightOf="@id/date_icon">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/date_text"-->
+            <!--android:text="Date"-->
+            <!--android:textSize="15dp"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/set_date"-->
+            <!--android:textSize="15dp"/>-->
+
+    <!--</LinearLayout>-->
+
+<!--</RelativeLayout>-->
+
+<!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="72dp"-->
+    <!--android:id="@+id/time"-->
+    <!--android:clickable="true"-->
+    <!--android:onClick="setTime">-->
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/time_icon"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="32dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/ic_access_time_black_24dp"-->
+        <!--/>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_toEndOf="@id/time_icon">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/time_text"-->
+            <!--android:text="Time"-->
+            <!--android:textSize="15dp"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/set_time"-->
+            <!--android:textSize="15dp"/>-->
+
+    <!--</LinearLayout>-->
+
+<!--</RelativeLayout>-->
+
+
+<!--</ScrollView>-->
+<!--<android.support.v7.widget.Toolbar-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:id="@+id/toolbar"-->
+<!--android:minHeight="?attr/actionBarSize"-->
+<!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--app:contentInsetLeft="0dp"-->
+<!--app:contentInsetStart="16dp"-->
+<!--app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+<!--</android.support.v7.widget.Toolbar>-->

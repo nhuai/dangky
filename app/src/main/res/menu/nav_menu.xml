@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:title="Tài khoản"
+        android:id="@+id/nav_account"
+        android:icon="@drawable/ic_account_box_black_24dp"/>
+    <item
+        android:title="New Task"
+        android:id="@+id/nav_newtask"
+        android:icon="@drawable/ic_edit_black_24dp"/>
+    <item
+        android:title="Feed back"
+        android:id="@+id/nav_feedback"
+        android:icon="@drawable/ic_feedback_black_24dp"/>
+    <item
+        android:title="Like us on Facebook"
+        android:id="@+id/nav_likefb"
+        android:icon="@drawable/ic_touch_app_black_24dp"/>
+
+
+</menu>
